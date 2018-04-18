@@ -18,6 +18,20 @@ class PhoneList extends Component {
     );
   };
 
+  onChange = (newValue, phoneIndex, field = "type") => {
+    const phone = this.state.phones[phoneIndex];
+    this.setState({
+      phones: [
+        ...this.state.phones.slice(0, phoneIndex),
+        {
+          ...phone,
+          [field]: newValue
+        },
+        ...this.state.phones.slice(phoneIndex + 1)
+      ]
+    });
+  };
+
   render() {
     const availableTypes = this.getAvailableTypes();
     return (
@@ -30,6 +44,7 @@ class PhoneList extends Component {
               {...p}
               types={this.state.types}
               availableTypes={availableTypes}
+              onChange={this.onChange}
             />
           ))}
         </div>
