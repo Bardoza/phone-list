@@ -17,8 +17,9 @@ class PhoneItem extends Component {
   };
 
   onNumberChange = e => {
+    
     this.props.onChange(
-      e.target.value.replace(/\D/, ""),
+      e.target.value.replace(/\D/gi, ""),
       this.props.index,
       "number"
     );
