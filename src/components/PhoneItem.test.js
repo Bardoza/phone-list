@@ -76,4 +76,12 @@ describe("PhoneItem", () => {
       .simulate("change", { target: { value: "123456789hgsj" } });
     expect(mockOnChange).toBeCalledWith("123456789", 0, "number");
   });
+
+  it("should not call mockOnChange if the number is > 15 chars", () => {
+    const wrapper = shallow(phoneItem);
+    wrapper
+      .find("input")
+      .simulate("change", { target: { value: "9834567891234566" } });
+    expect(mockOnChange).not.toBeCalled();
+  });
 });

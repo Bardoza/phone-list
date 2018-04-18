@@ -17,11 +17,12 @@ class PhoneItem extends Component {
   };
 
   onNumberChange = e => {
-    this.props.onChange(
-      e.target.value.replace(/\D/gi, ""),
-      this.props.index,
-      "number"
-    );
+    const number = e.target.value.replace(/\D/gi, "");
+    if (number.length > 15) {
+      return;
+    }
+
+    this.props.onChange(number, this.props.index, "number");
   };
 
   onDelete = () => this.props.onDelete(this.props.index);
