@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import PropTypes from 'prop-types'
+import PropTypes from "prop-types";
 import PhoneItem from "./PhoneItem";
 
 export const defaultPhone = {
@@ -8,28 +8,24 @@ export const defaultPhone = {
 };
 
 class PhoneList extends Component {
-  
-
   static propTypes = {
     title: PropTypes.string
-  }
+  };
 
   static defaultProps = {
     title: ""
-  }
+  };
 
   state = {
     types: ["Home", "Mobile", "Work", "Other"],
     phones: [defaultPhone]
   };
 
-
   // returns an array of strings with the phone types not used in the phones state
-  getAvailableTypes = () => 
-     this.state.types.filter(
+  getAvailableTypes = () =>
+    this.state.types.filter(
       type => !this.state.phones.some(phone => phone.type === type)
     );
-  
 
   addNewPhone = () => {
     const availableTypes = this.getAvailableTypes();
@@ -64,12 +60,13 @@ class PhoneList extends Component {
   };
 
   handleItemDelete = phoneIndex => {
-    const phones = this.state.phones.length === 1
-      ? [defaultPhone]
-      : [
-          ...this.state.phones.slice(0, phoneIndex),
-          ...this.state.phones.slice(phoneIndex + 1)
-        ];
+    const phones =
+      this.state.phones.length === 1
+        ? [defaultPhone]
+        : [
+            ...this.state.phones.slice(0, phoneIndex),
+            ...this.state.phones.slice(phoneIndex + 1)
+          ];
 
     this.setState({
       phones
@@ -99,8 +96,12 @@ class PhoneList extends Component {
           ))}
         </div>
         <div className="phone-footer">
-          <button onClick={this.logPhones} className="button">Log</button>
-          <button onClick={this.addNewPhone} className="button button-primary">Add Another</button>
+          <button onClick={this.logPhones} className="button">
+            Log
+          </button>
+          <button onClick={this.addNewPhone} className="button button-primary">
+            Add Another
+          </button>
         </div>
       </div>
     );

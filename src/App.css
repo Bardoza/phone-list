@@ -1,4 +1,4 @@
-.app-container{
+.app-container {
   display: flex;
   flex-wrap: wrap;
   margin: 0 auto;
@@ -6,39 +6,38 @@
   align-items: flex-start;
   text-align: center;
   max-width: 1200px;
-  justify-content:  space-around;
+  justify-content: space-around;
 }
 
-.phone-container{
+.phone-container {
   max-width: 320px;
-  box-shadow:0 1px 1px rgba(0,0,0,.05);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
   border: 1px solid #eee;
-  margin: 5px
+  margin: 5px;
 }
-
 
 .phone-container > h3 {
   text-align: center;
-
 }
 
-.phone-list, .phone-footer{
+.phone-list,
+.phone-footer {
   padding: 10px 20px;
 }
 
-.phone-footer{
+.phone-footer {
   display: flex;
   justify-content: space-between;
   padding-top: 15px;
-  border-top: 1px solid #eee
+  border-top: 1px solid #eee;
 }
 
-.phone-list{
+.phone-list {
   display: flex;
-  flex-direction: column
+  flex-direction: column;
 }
 
-.type-container{
+.type-container {
   padding: 5px;
   border: 1px solid #ccc;
   border-top-left-radius: 5px;
@@ -52,35 +51,30 @@
   cursor: pointer;
 }
 
-
 .type-container > select {
   background: transparent;
-  border:none;
-  font-size:14px;
+  border: none;
+  font-size: 14px;
   cursor: pointer;
 }
 
-
 .type-container > select:focus {
-  outline:none
+  outline: none;
 }
-
 
 .phone-item {
   flex: 1;
   display: flex;
-  margin: 5px 0
+  margin: 5px 0;
 }
 
-.phone-item > input[type="text"]{
+.phone-item > input[type="text"] {
   font-size: 14px;
   padding-left: 5px;
   border: 1px solid #ccc;
   border-right: none;
-  flex:1
-  
+  flex: 1;
 }
-
 
 .phone-item > button {
   background-color: #d9534f;
@@ -97,8 +91,7 @@
   cursor: pointer;
 }
 
-
-.button{
+.button {
   padding: 6px 12px;
   border-color: #ccc;
   background-color: #fff;
@@ -107,47 +100,42 @@
   border-radius: 4px;
 }
 
-.button:hover{
+.button:hover {
   background-color: #e6e6e6e6;
   cursor: pointer;
 }
 
-.button-primary{
+.button-primary {
   background-color: #337ab7;
   border-color: #2e6da4;
   color: #fff;
 }
 
-.button-primary:hover{
+.button-primary:hover {
   background-color: #286090;
-
 }
 
-
-@media (min-width: 576px) { 
+@media (min-width: 576px) {
   .app-container {
     max-width: 500px;
   }
- }
+}
 
-
-@media (min-width: 768px) { 
+@media (min-width: 768px) {
   .app-container {
     max-width: 600px;
   }
- }
+}
 
-
-@media (min-width: 992px) { 
+@media (min-width: 992px) {
   .app-container {
     max-width: 850px;
-    justify-content: flex-start
+    justify-content: flex-start;
   }
- }
+}
 
-
-@media (min-width: 1200px) { 
+@media (min-width: 1200px) {
   .app-container {
     max-width: 1000px;
   }
- }
+}

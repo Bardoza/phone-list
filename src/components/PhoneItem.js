@@ -17,7 +17,6 @@ class PhoneItem extends Component {
   };
 
   onNumberChange = e => {
-    
     this.props.onChange(
       e.target.value.replace(/\D/gi, ""),
       this.props.index,
@@ -26,7 +25,7 @@ class PhoneItem extends Component {
   };
 
   onDelete = () => this.props.onDelete(this.props.index);
-  
+
   render() {
     return (
       <div className="phone-item">
@@ -42,7 +41,6 @@ class PhoneItem extends Component {
               </option>
             ))}
           </select>
-
         </div>
         <input
           type="text"
