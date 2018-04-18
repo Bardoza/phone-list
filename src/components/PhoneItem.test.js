@@ -30,7 +30,7 @@ beforeEach( () => {
     number="476887251"
 />
 })
-describe('PhoneList', () => {
+describe('PhoneItem', () => {
     
     it("Render correctly", () => {
         expect(shallow(phoneItem)).toMatchSnapshot()  
