@@ -12,6 +12,24 @@ class PhoneList extends Component {
     ]
   };
 
+  addNewPhone = () => {
+    const availableTypes = this.getAvailableTypes();
+
+    if (!availableTypes.length) {
+      alert("You have use all the available phone types");
+      return;
+    }
+
+    const newPhone = {
+      number: "",
+      type: availableTypes[0]
+    };
+
+    this.setState({
+      phones: [...this.state.phones, newPhone]
+    });
+  };
+
   getAvailableTypes = () => {
     return this.state.types.filter(
       type => !this.state.phones.some(phone => phone.type === type)
@@ -50,7 +68,7 @@ class PhoneList extends Component {
         </div>
         <div>
           <button>Log</button>
-          <button>Add Another</button>
+          <button onClick={this.addNewPhone}>Add Another</button>
         </div>
       </div>
     );
