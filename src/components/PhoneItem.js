@@ -6,7 +6,11 @@ class PhoneItem extends Component {
   };
 
   onNumberChange = e => {
-    this.props.onChange(e.target.value, this.props.index, "number");
+    this.props.onChange(
+      e.target.value.replace(/\D/, ""),
+      this.props.index,
+      "number"
+    );
   };
   onDelete = e => {
     this.props.onDelete(this.props.index);
