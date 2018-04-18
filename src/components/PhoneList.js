@@ -107,7 +107,7 @@ class PhoneList extends Component {
         <div className="phone-list">
           {this.state.phones.map((p, ix) => (
             <PhoneItem
-              key={p.number}
+              key={`${p.type}`}
               index={ix}
               {...p}
               types={this.state.types}
