@@ -76,6 +76,11 @@
   flex: 1;
 }
 
+.phone-item > input[type="text"].first {
+  margin-right: 30px;
+  border-right: 1px solid #ccc;
+}
+
 .phone-item > button {
   background-color: #d9534f;
   color: #fff;
@@ -89,6 +94,10 @@
 .phone-item > button:hover {
   background-color: #c9302c;
   cursor: pointer;
+}
+
+.phone-item > button:disabled {
+  display: none;
 }
 
 .button {

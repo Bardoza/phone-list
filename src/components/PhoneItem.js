@@ -38,6 +38,7 @@ class PhoneItem extends Component {
   onDelete = () => this.props.onDelete(this.props.index);
 
   render() {
+    const isFirstChild = this.props.index === 0;
     return (
       <div className="phone-item">
         <div className="type-container">
@@ -57,8 +58,9 @@ class PhoneItem extends Component {
           type="text"
           value={this.props.number}
           onChange={this.onNumberChange}
+          className={isFirstChild ? "first" : ""}
         />
-        <button onClick={this.onDelete}>x</button>
+        {!isFirstChild && <button onClick={this.onDelete}>x</button>}
       </div>
     );
   }
