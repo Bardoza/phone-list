@@ -12,6 +12,12 @@ class PhoneList extends Component {
     ]
   };
 
+  getAvailableTypes = () => {
+    return this.state.types.filter(
+      type => !this.state.phones.some(phone => phone.type === type)
+    );
+  };
+
   addNewPhone = () => {
     const availableTypes = this.getAvailableTypes();
 
@@ -30,12 +36,6 @@ class PhoneList extends Component {
     });
   };
 
-  getAvailableTypes = () => {
-    return this.state.types.filter(
-      type => !this.state.phones.some(phone => phone.type === type)
-    );
-  };
-
   onChange = (newValue, phoneIndex, field = "type") => {
     const phone = this.state.phones[phoneIndex];
     this.setState({
@@ -48,6 +48,10 @@ class PhoneList extends Component {
         ...this.state.phones.slice(phoneIndex + 1)
       ]
     });
+  };
+
+  logPhones = () => {
+    console.table(this.state.phones);
   };
 
   render() {
@@ -67,7 +71,7 @@ class PhoneList extends Component {
           ))}
         </div>
         <div>
-          <button>Log</button>
+          <button onClick={this.logPhones}>Log</button>
           <button onClick={this.addNewPhone}>Add Another</button>
         </div>
       </div>
