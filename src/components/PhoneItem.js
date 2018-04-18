@@ -1,6 +1,17 @@
 import React, { Component } from "react";
+import PropTypes from "prop-types";
 
 class PhoneItem extends Component {
+  static propTypes = {
+    onChange: PropTypes.func.isRequired,
+    index: PropTypes.number.isRequired,
+    onDelete: PropTypes.func.isRequired,
+    types: PropTypes.arrayOf(PropTypes.string).isRequired,
+    availableTypes: PropTypes.arrayOf(PropTypes.string).isRequired,
+    type: PropTypes.string.isRequired,
+    number: PropTypes.oneOfType([PropTypes.number, PropTypes.string]).isRequired
+  };
+
   onTypeChange = e => {
     this.props.onChange(e.target.value, this.props.index, "type");
   };
