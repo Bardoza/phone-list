@@ -28,18 +28,21 @@ class PhoneItem extends Component {
   };
   render() {
     return (
-      <div>
-        <select value={this.props.type} onChange={this.onTypeChange}>
-          {this.props.types.map(type => (
-            <option
-              key={type}
-              value={type}
-              disabled={!this.props.availableTypes.some(t => t === type)}
-            >
-              {type}
-            </option>
-          ))}
-        </select>
+      <div className="phone-item">
+        <div className="type-container">
+          <select value={this.props.type} onChange={this.onTypeChange}>
+            {this.props.types.map(type => (
+              <option
+                key={type}
+                value={type}
+                disabled={!this.props.availableTypes.some(t => t === type)}
+              >
+                {type}
+              </option>
+            ))}
+          </select>
+
+        </div>
         <input
           type="text"
           value={this.props.number}
