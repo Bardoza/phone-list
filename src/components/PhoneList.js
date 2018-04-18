@@ -23,6 +23,8 @@ class PhoneList extends Component {
   }
 
   getAvailableTypes = () => {
+    // returns an array of strings with the phone types not used in the phones state
+    
     return this.state.types.filter(
       type => !this.state.phones.some(phone => phone.type === type)
     );
@@ -46,7 +48,7 @@ class PhoneList extends Component {
     });
   };
 
-  onChange = (newValue, phoneIndex, field = "type") => {
+  handleItemChange = (newValue, phoneIndex, field = "type") => {
     const phone = this.state.phones[phoneIndex];
     this.setState({
       phones: [
@@ -60,7 +62,7 @@ class PhoneList extends Component {
     });
   };
 
-  onDelete = phoneIndex => {
+  handleItemDelete = phoneIndex => {
     const phones = this.state.phones.length === 1
       ? [defaultPhone]
       : [
@@ -90,8 +92,8 @@ class PhoneList extends Component {
               {...p}
               types={this.state.types}
               availableTypes={availableTypes}
-              onChange={this.onChange}
-              onDelete={this.onDelete}
+              onChange={this.handleItemChange}
+              onDelete={this.handleItemDelete}
             />
           ))}
         </div>
