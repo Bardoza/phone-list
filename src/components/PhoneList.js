@@ -7,9 +7,13 @@ export const defaultPhone = {
   type: "Home"
 };
 
+/**
+ *  Renders a list of PhoneItems and allows to add, edit and delete the numbers
+ */
+
 class PhoneList extends Component {
   static propTypes = {
-    title: PropTypes.string
+    title: PropTypes.string // Optional title for the Phone List
   };
 
   static defaultProps = {
@@ -17,16 +21,21 @@ class PhoneList extends Component {
   };
 
   state = {
-    types: ["Home", "Mobile", "Work", "Other"],
-    phones: [defaultPhone]
+    types: ["Home", "Mobile", "Work", "Other"], // Array of phone types
+    phones: [defaultPhone] // Default phone object
   };
 
-  // returns an array of strings with the phone types not used in the phones state
+  /**
+   *  returns an array of strings with the phone types not used in the phones state
+   */
   getAvailableTypes = () =>
     this.state.types.filter(
       type => !this.state.phones.some(phone => phone.type === type)
     );
 
+  /**
+   * Adds a new row to the list if there are any phone type not in use already
+   */
   addNewPhone = () => {
     const availableTypes = this.getAvailableTypes();
 
@@ -45,6 +54,12 @@ class PhoneList extends Component {
     });
   };
 
+  /**
+   *  Edit a custom field on the phone object
+   *  @param {string|integer} newValue - the new value to change on the phone
+   *  @param {integer} phoneIndex - the index of the phone to edit
+   *  @param {string} field - the custom field to change the value
+   */
   handleItemChange = (newValue, phoneIndex, field = "type") => {
     const phone = this.state.phones[phoneIndex];
     this.setState({
@@ -59,6 +74,10 @@ class PhoneList extends Component {
     });
   };
 
+  /**
+   * Removes a phone from the array
+   * @param {integer} phoneIndex - Index of the phone to be removed
+   */
   handleItemDelete = phoneIndex => {
     const phones =
       this.state.phones.length === 1
@@ -73,6 +92,9 @@ class PhoneList extends Component {
     });
   };
 
+  /**
+   * Logs the current phone state to the console
+   */
   logPhones = () => {
     console.table(this.state.phones); // eslint-disable-line
   };
