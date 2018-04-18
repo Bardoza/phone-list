@@ -104,4 +104,25 @@ describe("PhoneItem", () => {
     );
     expect(wrapper.find("button")).toHaveLength(0);
   });
+
+  it("should render the input text without first class", () => {
+    const wrapper = shallow(phoneItem);
+    expect(wrapper.find('input[type="text"]')).toHaveLength(1);
+    expect(wrapper.find('input[type="text"].first')).toHaveLength(0);
+  });
+  it("should render the input text with first class", () => {
+    const wrapper = shallow(
+      <PhoneItem
+        onChange={mockOnChange}
+        onDelete={mockOnDelete}
+        index={0}
+        types={["Work", "Mobile"]}
+        availableTypes={["Mobile"]}
+        type="Work"
+        number="476887251"
+      />
+    );
+    expect(wrapper.find('input[type="text"]')).toHaveLength(1);
+    expect(wrapper.find('input[type="text"].first')).toHaveLength(1);
+  });
 });
