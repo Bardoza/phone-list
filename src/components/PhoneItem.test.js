@@ -24,7 +24,7 @@ beforeEach(() => {
     <PhoneItem
       onChange={mockOnChange}
       onDelete={mockOnDelete}
-      index={0}
+      index={1}
       types={["Work", "Mobile"]}
       availableTypes={["Mobile"]}
       type="Work"
@@ -60,13 +60,13 @@ describe("PhoneItem", () => {
   it("should call mockOnChange when changing select option", () => {
     const wrapper = shallow(phoneItem);
     wrapper.find("select").simulate("change", { target: { value: "Mobile" } });
-    expect(mockOnChange).toBeCalledWith("Mobile", 0, "type");
+    expect(mockOnChange).toBeCalledWith("Mobile", 1, "type");
   });
 
   it("should call mockOnChange when changing input text", () => {
     const wrapper = shallow(phoneItem);
     wrapper.find("input").simulate("change", { target: { value: "3548321" } });
-    expect(mockOnChange).toBeCalledWith("3548321", 0, "number");
+    expect(mockOnChange).toBeCalledWith("3548321", 1, "number");
   });
 
   it("should call mockOnChange with only numerical values", () => {
@@ -74,7 +74,7 @@ describe("PhoneItem", () => {
     wrapper
       .find("input")
       .simulate("change", { target: { value: "123456789hgsj" } });
-    expect(mockOnChange).toBeCalledWith("123456789", 0, "number");
+    expect(mockOnChange).toBeCalledWith("123456789", 1, "number");
   });
 
   it("should not call mockOnChange if the number is > 15 chars", () => {
@@ -83,5 +83,25 @@ describe("PhoneItem", () => {
       .find("input")
       .simulate("change", { target: { value: "9834567891234566" } });
     expect(mockOnChange).not.toBeCalled();
+  });
+
+  it("should  render the delete button if index !== 0", () => {
+    const wrapper = shallow(phoneItem);
+    expect(wrapper.find("button")).toHaveLength(1);
+  });
+
+  it("should not render the delete button if index === 0", () => {
+    const wrapper = shallow(
+      <PhoneItem
+        onChange={mockOnChange}
+        onDelete={mockOnDelete}
+        index={0}
+        types={["Work", "Mobile"]}
+        availableTypes={["Mobile"]}
+        type="Work"
+        number="476887251"
+      />
+    );
+    expect(wrapper.find("button")).toHaveLength(0);
   });
 });

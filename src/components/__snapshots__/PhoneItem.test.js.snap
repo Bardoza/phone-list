@@ -10,7 +10,7 @@ ShallowWrapper {
             "Mobile",
           ]
     }
-    index={0}
+    index={1}
     number="476887251"
     onChange={[Function]}
     onDelete={[Function]}
@@ -57,6 +57,7 @@ ShallowWrapper {
           </select>
 </div>,
         <input
+          className=""
           onChange={[Function]}
           type="text"
           value="476887251"
@@ -156,6 +157,7 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
+          "className": "",
           "onChange": [Function],
           "type": "text",
           "value": "476887251",
@@ -208,6 +210,7 @@ ShallowWrapper {
             </select>
 </div>,
           <input
+            className=""
             onChange={[Function]}
             type="text"
             value="476887251"
@@ -307,6 +310,7 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
+            "className": "",
             "onChange": [Function],
             "type": "text",
             "value": "476887251",
