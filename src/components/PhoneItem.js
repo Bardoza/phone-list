@@ -8,6 +8,9 @@ class PhoneItem extends Component {
   onNumberChange = e => {
     this.props.onChange(e.target.value, this.props.index, "number");
   };
+  onDelete = e => {
+    this.props.onDelete(this.props.index);
+  };
   render() {
     return (
       <div>
@@ -27,7 +30,7 @@ class PhoneItem extends Component {
           value={this.props.number}
           onChange={this.onNumberChange}
         />
-        <button>x</button>
+        <button onClick={this.onDelete}>x</button>
       </div>
     );
   }

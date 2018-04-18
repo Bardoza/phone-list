@@ -50,6 +50,16 @@ class PhoneList extends Component {
     });
   };
 
+  onDelete = phoneIndex => {
+    const phone = this.state.phones[phoneIndex];
+    this.setState({
+      phones: [
+        ...this.state.phones.slice(0, phoneIndex),
+        ...this.state.phones.slice(phoneIndex + 1)
+      ]
+    });
+  };
+
   logPhones = () => {
     console.table(this.state.phones);
   };
@@ -67,6 +77,7 @@ class PhoneList extends Component {
               types={this.state.types}
               availableTypes={availableTypes}
               onChange={this.onChange}
+              onDelete={this.onDelete}
             />
           ))}
         </div>
