@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import PropTypes from 'prop-types'
 import PhoneItem from "./PhoneItem";
 
-const defaultPhone = {
+export const defaultPhone = {
   number: "",
   type: "Home"
 };

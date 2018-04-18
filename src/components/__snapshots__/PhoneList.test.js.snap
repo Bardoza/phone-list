@@ -1,0 +1,395 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`phoneList Render correctly 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <PhoneList
+    title="List 1"
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <h3>
+          List 1
+</h3>,
+        <div
+          className="phone-list"
+>
+          <PhoneItem
+                    availableTypes={
+                              Array [
+                                        "Mobile",
+                                        "Work",
+                                        "Other",
+                                      ]
+                    }
+                    index={0}
+                    number=""
+                    onChange={[Function]}
+                    onDelete={[Function]}
+                    type="Home"
+                    types={
+                              Array [
+                                        "Home",
+                                        "Mobile",
+                                        "Work",
+                                        "Other",
+                                      ]
+                    }
+          />
+</div>,
+        <div
+          className="phone-footer"
+>
+          <button
+                    className="button"
+                    onClick={[Function]}
+          >
+                    Log
+          </button>
+          <button
+                    className="button button-primary"
+                    onClick={[Function]}
+          >
+                    Add Another
+          </button>
+</div>,
+      ],
+      "className": "phone-container",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "List 1",
+        },
+        "ref": null,
+        "rendered": "List 1",
+        "type": "h3",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <PhoneItem
+              availableTypes={
+                            Array [
+                                          "Mobile",
+                                          "Work",
+                                          "Other",
+                                        ]
+              }
+              index={0}
+              number=""
+              onChange={[Function]}
+              onDelete={[Function]}
+              type="Home"
+              types={
+                            Array [
+                                          "Home",
+                                          "Mobile",
+                                          "Work",
+                                          "Other",
+                                        ]
+              }
+/>,
+          ],
+          "className": "phone-list",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "availableTypes": Array [
+                "Mobile",
+                "Work",
+                "Other",
+              ],
+              "index": 0,
+              "number": "",
+              "onChange": [Function],
+              "onDelete": [Function],
+              "type": "Home",
+              "types": Array [
+                "Home",
+                "Mobile",
+                "Work",
+                "Other",
+              ],
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+        ],
+        "type": "div",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <button
+              className="button"
+              onClick={[Function]}
+>
+              Log
+</button>,
+            <button
+              className="button button-primary"
+              onClick={[Function]}
+>
+              Add Another
+</button>,
+          ],
+          "className": "phone-footer",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Log",
+              "className": "button",
+              "onClick": [Function],
+            },
+            "ref": null,
+            "rendered": "Log",
+            "type": "button",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Add Another",
+              "className": "button button-primary",
+              "onClick": [Function],
+            },
+            "ref": null,
+            "rendered": "Add Another",
+            "type": "button",
+          },
+        ],
+        "type": "div",
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <h3>
+            List 1
+</h3>,
+          <div
+            className="phone-list"
+>
+            <PhoneItem
+                        availableTypes={
+                                    Array [
+                                                "Mobile",
+                                                "Work",
+                                                "Other",
+                                              ]
+                        }
+                        index={0}
+                        number=""
+                        onChange={[Function]}
+                        onDelete={[Function]}
+                        type="Home"
+                        types={
+                                    Array [
+                                                "Home",
+                                                "Mobile",
+                                                "Work",
+                                                "Other",
+                                              ]
+                        }
+            />
+</div>,
+          <div
+            className="phone-footer"
+>
+            <button
+                        className="button"
+                        onClick={[Function]}
+            >
+                        Log
+            </button>
+            <button
+                        className="button button-primary"
+                        onClick={[Function]}
+            >
+                        Add Another
+            </button>
+</div>,
+        ],
+        "className": "phone-container",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "List 1",
+          },
+          "ref": null,
+          "rendered": "List 1",
+          "type": "h3",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <PhoneItem
+                availableTypes={
+                                Array [
+                                                "Mobile",
+                                                "Work",
+                                                "Other",
+                                              ]
+                }
+                index={0}
+                number=""
+                onChange={[Function]}
+                onDelete={[Function]}
+                type="Home"
+                types={
+                                Array [
+                                                "Home",
+                                                "Mobile",
+                                                "Work",
+                                                "Other",
+                                              ]
+                }
+/>,
+            ],
+            "className": "phone-list",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "availableTypes": Array [
+                  "Mobile",
+                  "Work",
+                  "Other",
+                ],
+                "index": 0,
+                "number": "",
+                "onChange": [Function],
+                "onDelete": [Function],
+                "type": "Home",
+                "types": Array [
+                  "Home",
+                  "Mobile",
+                  "Work",
+                  "Other",
+                ],
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+          ],
+          "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <button
+                className="button"
+                onClick={[Function]}
+>
+                Log
+</button>,
+              <button
+                className="button button-primary"
+                onClick={[Function]}
+>
+                Add Another
+</button>,
+            ],
+            "className": "phone-footer",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Log",
+                "className": "button",
+                "onClick": [Function],
+              },
+              "ref": null,
+              "rendered": "Log",
+              "type": "button",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Add Another",
+                "className": "button button-primary",
+                "onClick": [Function],
+              },
+              "ref": null,
+              "rendered": "Add Another",
+              "type": "button",
+            },
+          ],
+          "type": "div",
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;
