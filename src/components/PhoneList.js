@@ -1,15 +1,15 @@
 import React, { Component } from "react";
 import PhoneItem from "./PhoneItem";
 
+const defaultPhone = {
+  number: "",
+  type: "Home"
+};
+
 class PhoneList extends Component {
   state = {
     types: ["Home", "Mobile", "Work", "Other"],
-    phones: [
-      {
-        number: "4777153366",
-        type: "Work"
-      }
-    ]
+    phones: [defaultPhone]
   };
 
   getAvailableTypes = () => {
@@ -51,12 +51,15 @@ class PhoneList extends Component {
   };
 
   onDelete = phoneIndex => {
-    const phone = this.state.phones[phoneIndex];
+    const phones = this.state.phones.length === 1
+      ? [defaultPhone]
+      : [
+          ...this.state.phones.slice(0, phoneIndex),
+          ...this.state.phones.slice(phoneIndex + 1)
+        ];
+
     this.setState({
-      phones: [
-        ...this.state.phones.slice(0, phoneIndex),
-        ...this.state.phones.slice(phoneIndex + 1)
-      ]
+      phones
     });
   };
 
