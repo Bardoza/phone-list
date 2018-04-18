@@ -1,3 +1,38 @@
+.app-container{
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  padding: 20px 15px 0;
+  align-items: flex-start;
+  text-align: center;
+  max-width: 1200px;
+  justify-content:  space-around;
+}
+
+.phone-container{
+  max-width: 320px;
+  box-shadow:0 1px 1px rgba(0,0,0,.05);
+  border: 1px solid #eee;
+  margin: 5px
+}
+
+
+.phone-container > h3 {
+  text-align: center;
+
+}
+
+.phone-list, .phone-footer{
+  padding: 10px 20px;
+}
+
+.phone-footer{
+  display: flex;
+  justify-content: space-between;
+  padding-top: 15px;
+  border-top: 1px solid #eee
+}
+
 .phone-list{
   display: flex;
   flex-direction: column
@@ -12,17 +47,11 @@
 }
 
 .type-container:hover {
-  background: #eee;
+  background: #e6e6e6e6;
   color: #282828;
   cursor: pointer;
 }
 
-
-.phone-item {
-    flex: 1;
-    display: flex;
-    margin: 3px 2px;
-}
 
 .type-container > select {
   background: transparent;
@@ -30,37 +59,94 @@
   font-size:14px;
 }
 
-.type-container:focus-within{
- 
-}
 
 .type-container > select:focus {
   outline:none
 }
 
 
+.phone-item {
+  flex: 1;
+  display: flex;
+  margin: 5px 0
+}
+
 .phone-item > input[type="text"]{
   font-size: 14px;
   padding-left: 5px;
   border: 1px solid #ccc;
   border-right: none;
+  flex:1
   
 }
 
 
 .phone-item > button {
-  
   background-color: #d9534f;
   color: #fff;
   font-size: 14px;
   border: 1px solid transparent;
-  border-top-right-radius: 5px;
-  border-bottom-right-radius: 5px;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
   width: 30px;
 }
+
 .phone-item > button:hover {
-  
   background-color: #c9302c;
   cursor: pointer;
+}
+
+
+.button{
+  padding: 6px 12px;
+  border-color: #ccc;
+  background-color: #fff;
+  color: #282828;
+  font-size: 14px;
+  border-radius: 4px;
+}
+
+.button:hover{
+  background-color: #e6e6e6e6;
+  cursor: pointer;
+}
+
+.button-primary{
+  background-color: #337ab7;
+  border-color: #2e6da4;
+  color: #fff;
+}
+
+.button-primary:hover{
+  background-color: #286090;
 
 }
+
+
+@media (min-width: 576px) { 
+  .app-container {
+    max-width: 500px;
+  }
+ }
+
+
+@media (min-width: 768px) { 
+  .app-container {
+    max-width: 600px;
+  }
+ }
+
+
+@media (min-width: 992px) { 
+  .app-container {
+    max-width: 850px;
+    justify-content: flex-start
+  }
+ }
+
+
+@media (min-width: 1200px) { 
+  .app-container {
+    max-width: 1000px;
+  }
+ }

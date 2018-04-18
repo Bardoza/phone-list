@@ -71,6 +71,7 @@ class PhoneList extends Component {
     const availableTypes = this.getAvailableTypes();
     return (
       <div className="phone-container">
+        <h3>{this.props.title}</h3>
         <div className="phone-list">
           {this.state.phones.map((p, ix) => (
             <PhoneItem
@@ -85,8 +86,8 @@ class PhoneList extends Component {
           ))}
         </div>
         <div className="phone-footer">
-          <button onClick={this.logPhones}>Log</button>
-          <button onClick={this.addNewPhone}>Add Another</button>
+          <button onClick={this.logPhones} className="button">Log</button>
+          <button onClick={this.addNewPhone} className="button button-primary">Add Another</button>
         </div>
       </div>
     );

@@ -5,8 +5,10 @@ import PhoneList from "./components/PhoneList";
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <PhoneList />
+      <div className="app-container">
+        <PhoneList title="List 1" />
+        <PhoneList title="List 2" />
+        <PhoneList title="List 3" />
       </div>
     );
   }
