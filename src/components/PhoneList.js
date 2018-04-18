@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import PropTypes from 'prop-types'
 import PhoneItem from "./PhoneItem";
 
 const defaultPhone = {
@@ -11,6 +12,15 @@ class PhoneList extends Component {
     types: ["Home", "Mobile", "Work", "Other"],
     phones: [defaultPhone]
   };
+
+
+  static propTypes = {
+    title: PropTypes.string
+  }
+
+  static defaultProps = {
+    title: ""
+  }
 
   getAvailableTypes = () => {
     return this.state.types.filter(
