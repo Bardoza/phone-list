@@ -8,11 +8,7 @@ const defaultPhone = {
 };
 
 class PhoneList extends Component {
-  state = {
-    types: ["Home", "Mobile", "Work", "Other"],
-    phones: [defaultPhone]
-  };
-
+  
 
   static propTypes = {
     title: PropTypes.string
@@ -22,13 +18,18 @@ class PhoneList extends Component {
     title: ""
   }
 
-  getAvailableTypes = () => {
-    // returns an array of strings with the phone types not used in the phones state
-    
-    return this.state.types.filter(
+  state = {
+    types: ["Home", "Mobile", "Work", "Other"],
+    phones: [defaultPhone]
+  };
+
+
+  // returns an array of strings with the phone types not used in the phones state
+  getAvailableTypes = () => 
+     this.state.types.filter(
       type => !this.state.phones.some(phone => phone.type === type)
     );
-  };
+  
 
   addNewPhone = () => {
     const availableTypes = this.getAvailableTypes();
@@ -76,7 +77,7 @@ class PhoneList extends Component {
   };
 
   logPhones = () => {
-    console.table(this.state.phones);
+    console.table(this.state.phones); // eslint-disable-line
   };
 
   render() {
@@ -87,7 +88,7 @@ class PhoneList extends Component {
         <div className="phone-list">
           {this.state.phones.map((p, ix) => (
             <PhoneItem
-              key={ix}
+              key={p.number}
               index={ix}
               {...p}
               types={this.state.types}

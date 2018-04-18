@@ -23,9 +23,9 @@ class PhoneItem extends Component {
       "number"
     );
   };
-  onDelete = e => {
-    this.props.onDelete(this.props.index);
-  };
+
+  onDelete = () => this.props.onDelete(this.props.index);
+  
   render() {
     return (
       <div className="phone-item">
